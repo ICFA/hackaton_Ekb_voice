@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="chat-container">
+        <div id="messages" class="messages"></div>
+        <form id="messageForm" onsubmit="sendMessage(); return false;">
+            <div class="input-container">
+                <input type="text" id="messageInput" class="message-input" placeholder="Введите сообщение..." autocomplete="off">
+                <button type="submit" class="send-button">Отправить</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

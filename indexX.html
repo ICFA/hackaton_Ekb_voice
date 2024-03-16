@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'flairest_campus/css/main.css' %}">
+    <script src="{% static 'flairest_campus/scripts/main.js' %}"></script>
+    <title>Общение</title>
+</head>
+<body>
+    <div class="chat-container">
+        <form method="POST" enctype="multipart/form-data">
+        <div id="messages" class="messages"></div>
+        <form id="messageForm" onsubmit="sendMessage(); return false;">
+            <div class="input-container">
+                {% csrf_token %}
+                    <input type="text" name="sms" id="messageInput" class="message-input" 
+                    placeholder="Введите сообщение..." autocomplete="off"/>
+                    <button type="submit" class="send-button" value="Send">Отправить</button>
+            </div>
+            <p>Ответ:</p>
+            <p>{{ answer }}</p>
+            <p>Голос:</p>
+            <audio controls autoplay src="{% static 'flairest_campus/test.wav' %}"></audio>
+        </form>
+        </form>
+    </div>
+</body>
+</html>

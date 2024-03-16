@@ -69,3 +69,12 @@
     transform: translateX(-50%); 
 }
 
+.received-message {
+    align-self: flex-start; 
+    background-color: #ddd;
+    color: #000; 
+    border-radius: 10px; 
+    padding: 10px;
+    margin-right: 75%; 
+    transform: translateX(50%); 
+}
